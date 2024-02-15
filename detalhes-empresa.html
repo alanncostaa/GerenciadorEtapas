@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="detalhes-container">
+    <h2>Detalhes da Empresa</h2>
+
+    <!-- Anexar Arquivos -->
+    <div class="etapa" id="anexarArquivos">
+        <div class="etapa-header">
+            <h3>Anexar Arquivos</h3>
+            <div class="status-dropdown">
+                <label for="statusAnexarArquivos">Status:</label>
+                <select id="statusAnexarArquivos">
+                    <option value="aIniciar">A Iniciar</option>
+                    <option value="emAnalise">Em Análise</option>
+                    <option value="pendente">Pendente</option>
+                </select>
+            </div>
+        </div>
+        <form id="anexarArquivosForm">
+            <label for="arquivo">Selecione os arquivos:</label>
+            <input type="file" id="arquivo" name="arquivo" multiple>
+            <button type="button" onclick="anexarArquivos()">Anexar</button>
+        </form>
+        <div id="arquivosAnexados"></div>
+        <div class="comentarios">
+            <h4>Comentários</h4>
+            <form id="comentarioAnexarArquivosForm">
+                <textarea id="comentarioAnexarArquivos" placeholder="Adicionar comentário"></textarea>
+                <button type="button" onclick="adicionarComentario('anexarArquivos')">Adicionar Comentário</button>
+            </form>
+            <div id="comentariosApresentar" class="comentarios-container"></div>
+        </div>
+    </div>
+
+    <!-- Adicione outras etapas (PGR, Ficha de EPIS, Ordem de Serviço) aqui -->
+
+    <a href="index.html">Voltar</a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

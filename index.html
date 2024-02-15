@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Processos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="process-container">
+    <div class="process" id="iniciar">
+        <h2>A Iniciar</h2>
+        <div class="empresas">
+            <!-- Adicione aqui a lista de empresas no status "A Iniciar" -->
+            <div class="empresa" id="empresaA">
+                <p>Empresa A</p>
+                <div class="actions">
+                    <button onclick="mostrarDetalhes('empresaA')">Detalhes</button>
+                    <div class="status-dropdown">
+                        <span>Status:</span>
+                        <select onchange="mudarStatusEmpresa(this, 'empresaA')">
+                            <option value="iniciar" selected>A Iniciar</option>
+                            <option value="emAndamento">Em Andamento</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="empresa" id="empresaB">
+                <p>Empresa B</p>
+                <div class="actions">
+                    <button onclick="mostrarDetalhes('empresaB')">Detalhes</button>
+                    <div class="status-dropdown">
+                        <span>Status:</span>
+                        <select onchange="mudarStatusEmpresa(this, 'empresaB')">
+                            <option value="iniciar" selected>A Iniciar</option>
+                            <option value="emAndamento">Em Andamento</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="process" id="emAndamento">
+        <h2>Em Andamento</h2>
+        <div class="empresas">
+            <!-- Adicione aqui a lista de empresas no status "Em Andamento" -->
+            
+        </div>
+    </div>
+
+    <div class="process" id="concluido">
+        <h2>Concluído</h2>
+        <div class="empresas">
+            <!-- Adicione aqui a lista de empresas no status "Concluído" -->
+            
+            
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
